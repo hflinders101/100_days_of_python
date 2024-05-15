@@ -21,7 +21,7 @@ scoreboard = Scoreboard()
 screen.listen()
 screen.onkeypress(player.player_forward, 'Up') #can't have () after the function
 
-starting_cars = 1
+starting_cars = 10
 list_of_cars = []
 car_positions = []
 speed_of_cars = .3
@@ -52,10 +52,10 @@ while game_is_on:
         player.create_player()
         car.increase_speed()
 
-    # car = Car()
-    # car.start_at_edge()
-    # car.check_next_to_another_car(list_of_cars)
-    # list_of_cars.append(car)
+    car = Car()
+    car.start_at_edge()
+    car.check_next_to_another_car(list_of_cars)
+    list_of_cars.append(car)
 
 
 screen.exitonclick()
